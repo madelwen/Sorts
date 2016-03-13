@@ -1,9 +1,9 @@
 import random
 
-def randNum(i, min, max):
+def randNum(i, mi, ma):
 	randNumList = []
 	for x in range(0,i):
-		rand = random.randint(min,max)
+		rand = random.randint(mi,ma)
 		print rand
 		randNumList.append(rand)
 	return randNumList
