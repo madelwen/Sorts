@@ -1,4 +1,5 @@
 import math
+from selectionsort import randNum
 
 #def mergeSort(numList, lo, hi):
 	# print "In merge sort with lo: %d and hi: %d" % lo hi
@@ -16,9 +17,9 @@ def sort(numList):
 	print "left: %s" % left
 	right = numList[mid:]
 	print "right: %s" % right
-	sort(left)
-	sort(right)
-	merge(left, right)
+	sortedLeft = sort(left)
+	sortedRight = sort(right)
+	return merge(sortedLeft, sortedRight)
 		
 def merge(list1, list2):
 	print "Merging list1: %s" % list1
@@ -50,6 +51,6 @@ def merge(list1, list2):
 	print "Sorted list before return: %s" % sortList
 	return sortList
 
-numList = [9, 1, 3, 5, 2, 7]
+numList = randNum(10, 0, 100)
 print sort(numList)
 	
