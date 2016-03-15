@@ -1,14 +1,14 @@
 import math
 from selectionsort import randNum
 	
-def sort(numList):
+def zort(numList):
 	if len(numList) == 1:
 		return numList
 	mid = len(numList)//2
 	left = numList[:mid]
 	right = numList[mid:]
-	sortedLeft = sort(left)
-	sortedRight = sort(right)
+	sortedLeft = zort(left)
+	sortedRight = zort(right)
 	return merge(sortedLeft, sortedRight)
 		
 def merge(list1, list2):
@@ -33,5 +33,5 @@ def merge(list1, list2):
 
 numList = randNum(10, 0, 100)
 print numList
-print sort(numList)
+print zort(numList)
 	
