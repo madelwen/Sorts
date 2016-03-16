@@ -1,4 +1,4 @@
-import math
+import random
 from selectionsort import randNum
 
 def qwik(nums):
@@ -7,7 +7,7 @@ def qwik(nums):
 	def part(nums, l, r):
 		i = l
 		j = r
-		pivot = nums[(l+r)/2]
+		pivot = nums[random.randint(l,r)]
 		while i <= j:
 			while nums[i] < pivot:
 				i = i + 1
